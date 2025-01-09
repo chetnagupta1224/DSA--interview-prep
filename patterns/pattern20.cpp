@@ -20,6 +20,20 @@ int main(){
 
        cout << endl; 
     }
+    for(int i =0 ; i<n; i++){
+        // step 1 : stars
+        for(int j = 0; j<=i; j++){
+            cout << "*";
+        }
+        // step 2: spaces
+        for(int j = 0; j < 2*n-2*i-2; j++){
+            cout << " ";
+        }
+        for(int j = 0; j<=i; j++){
+            cout << "*";
+        }
+        cout<< endl;
+    }
       
     
     
