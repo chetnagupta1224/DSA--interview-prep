@@ -4,34 +4,34 @@ using namespace std;
 int main(){
 
     int n = 5; 
-    int arr[n] = {55,5,8,15,6};
+    int arr[n] = {55,54,8,15,6};
     
-    int maxNum = arr[0];
-    for(int i = 1; i < n; i++){
-        if(maxNum < arr[i]){
-            maxNum = arr[i];
+    int first = 0;
+    int second = 0;
+    int third = 0;
+
+    for(int i = 0; i<n; i++){
+
+        if(first < arr[i]){
+            third = second;
+            second = first;
+            first = arr[i];
         }
-    }
-    int secondMax = arr[0];
-    for(int i = 1; i < n; i++){
-        if(secondMax < arr[i] && arr[i] != maxNum){
-            cout<< "second " << secondMax<<endl;
-            secondMax = arr[i];
-            
+        else if(second < arr[i]){
+            third = second;
+            second = arr[i];
         }
-    }
-    int thirdMax = arr[0];
-    for(int i = 1; i < n; i++){
-        if(thirdMax < arr[i] && arr[i] != maxNum && arr[i] != secondMax){
-            
-            thirdMax = arr[i];
-            
+        else if(third < arr[i]){
+            third = arr[i];
         }
+            
+
+       
     }
-    cout <<"Max element is = "<< maxNum<<endl;
-    cout << "Second max elment is = " << secondMax << endl;
-    cout << "Third max elment is = " << thirdMax;
-  
+    cout << "first = " << first<<endl;
+    cout << "second = "<< second<<endl;
+    cout << "third = "<< third << endl;
+
     
     return 0;
 }
