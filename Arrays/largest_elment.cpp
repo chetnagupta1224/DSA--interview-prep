@@ -4,11 +4,7 @@ using namespace std;
 int main(){
 
     int n = 5; 
-    int arr[n];
-    cout << "Enter elements: ";
-    for(int i = 0; i< n; i++){
-        cin >> arr[i];
-    }
+    int arr[n] = {3,5,8,7,9};
     int maxNum = arr[0];
     for(int i = 1; i < n; i++){
         if(maxNum < arr[i]){
